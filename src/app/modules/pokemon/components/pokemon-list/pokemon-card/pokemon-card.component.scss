@@ -1,0 +1,29 @@
+mat-card {
+  width: 160px;
+  margin: 8px;
+  cursor: pointer;
+  mat-card-header {
+    text-align: center;
+  }
+
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+
+    .tags-container {
+      display: flex;
+      flex-direction: row;
+      place-content: center;
+      align-items: center;
+
+      span {
+        border-radius: 5px;
+        background-color: #dfe1e4;
+        padding: 1px 5px;
+        margin: 5px;
+      }
+    }
+  }
+}

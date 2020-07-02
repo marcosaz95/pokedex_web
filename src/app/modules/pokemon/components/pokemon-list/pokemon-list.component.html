@@ -1,0 +1,13 @@
+<div class="list"
+     (scroll)="onScroll($event)"
+     *ngIf="pokemons.length">
+    <ng-container *ngFor="let pokemon of pokemons">
+        <app-pokemon-card [pokemon]="pokemon"
+                          (click)="viewDetail(pokemon.id)"></app-pokemon-card>
+    </ng-container>
+</div>
+<div class="empty"
+     *ngIf="!pokemons.length">
+    <h3>
+        No results were found, please try a different search criteria</h3>
+</div>

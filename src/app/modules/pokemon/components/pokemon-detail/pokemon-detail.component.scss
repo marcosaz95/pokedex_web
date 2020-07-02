@@ -1,0 +1,65 @@
+.container {
+  overflow: auto;
+  max-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  app-evolution-chain {
+    flex: 1 1 0%;
+    margin: 16px;
+  }
+
+  mat-card {
+    max-width: 500px;
+    margin: 24px auto;
+
+    mat-card-header {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      place-content: center;
+    }
+
+    mat-card-content {
+      display: flex;
+      flex-direction: column;
+      place-content: center;
+      align-items: center;
+
+      .tags-container {
+        display: flex;
+        flex-direction: row;
+        place-content: center;
+        align-items: center;
+
+        span {
+          border-radius: 5px;
+          background-color: #dfe1e4;
+          padding: 1px 5px;
+          margin: 5px;
+        }
+      }
+
+      h3 {
+        margin: 14px;
+      }
+
+      .movements {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        span {
+          width: 150px;
+          min-width: 150px;
+        }
+
+        a {
+          color: blue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

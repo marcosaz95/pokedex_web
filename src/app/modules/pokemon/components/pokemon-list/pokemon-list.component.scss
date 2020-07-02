@@ -1,0 +1,12 @@
+.list {
+  overflow-y: scroll;
+  max-height: calc(100vh - 68px);
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.empty {
+  padding: 24px;
+  text-align: center;
+}

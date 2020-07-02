@@ -1,0 +1,42 @@
+<mat-toolbar>
+    <div class="home">
+        <mat-icon class="material-icons"
+                  (click)="goHome()"
+                  *ngIf="!isHomePage">home</mat-icon>
+        <span>Pokemon List</span>
+    </div>
+    <div class="search-input">
+
+        <input placeholder="Search pokemon by name or type"
+               #searchText />
+        <button mat-button
+                (click)="search(searchText.value)">
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+    <div>
+        <button [disableRipple]="true"
+                [matMenuTriggerFor]="profile"
+                mat-icon-button>
+            <mat-icon id="core-4757844d-afd3-4594-a767-0e61146ccdf6">more_horiz</mat-icon>
+        </button>
+        <mat-menu class="menu"
+                  overlapTrigger="false"
+                  #profile="matMenu">
+            <button mat-menu-item
+                    (click)="viewProfile()">
+                <mat-icon class="material-icons">person</mat-icon>
+                <span>View Profile</span>
+            </button>
+
+            <button mat-menu-item
+                    (click)="signOut()">
+                <mat-icon class="app-core-icons">exit_to_app</mat-icon>
+                <span>Sign out</span>
+            </button>
+        </mat-menu>
+    </div>
+</mat-toolbar>
+<mat-progress-bar mode="indeterminate"
+                  *ngIf="isLoading"></mat-progress-bar>
+<router-outlet></router-outlet>

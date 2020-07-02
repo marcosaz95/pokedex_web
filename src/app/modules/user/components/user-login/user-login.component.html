@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="header">
+        <h3>Welcome to POKEDEX APP</h3>
+        <label>Sign in to search different pokemons and see their information</label>
+    </div>
+
+    <form novalidate
+          [formGroup]="loginForm"
+          (ngSubmit)="signIn()">
+        <mat-form-field>
+            <input type="text"
+                   matInput
+                   placeholder="Email"
+                   formControlName="email"
+                   required />
+            <mat-error *ngIf="loginForm.get('email').hasError('required')">This field is required!</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password"
+                   matInput
+                   placeholder="Password"
+                   formControlName="password"
+                   required />
+            <mat-error *ngIf="loginForm.get('password').hasError('required')">This field is required!</mat-error>
+        </mat-form-field>
+        <div class="footer">
+            <button type="submit"
+                    mat-button
+                    [disabled]="!loginForm.valid">Sign In!</button>
+        </div>
+        <span>Still not a Master Pokemon?, Register <a (click)="redirectRegisterForm()">Here!</a></span>
+    </form>
+</div>

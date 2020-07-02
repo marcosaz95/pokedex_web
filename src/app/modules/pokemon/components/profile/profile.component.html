@@ -1,0 +1,51 @@
+<div class="container">
+    <mat-card>
+        <div class="header">
+            <h3>Profile</h3>
+            <label>Here you can update the basic information.</label>
+        </div>
+        <form novalidate
+              [formGroup]="userForm"
+              (ngSubmit)="update()">
+            <mat-form-field>
+                <input type="text"
+                       placeholder="Name"
+                       formControlName="name"
+                       required="true"
+                       matInput />
+            </mat-form-field>
+            <mat-error *ngIf="userForm.get('name').hasError('required')">This field is
+                required!!</mat-error>
+            <mat-form-field>
+                <input type="email"
+                       placeholder="Email"
+                       formControlName="email"
+                       required
+                       matInput />
+                <mat-error *ngIf="userForm.get('email').hasError('required')">This field is
+                    required!!</mat-error>
+                <mat-error *ngIf="userForm.get('email').hasError('pattern')">
+                    Please type a valid email</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input type="password"
+                       placeholder="Password"
+                       formControlName="password"
+                       matInput />
+                <button matSuffix
+                        mat-icon-button
+                        type="button"
+                        (click)="openPasswordForm()">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </mat-form-field>
+            <div class="footer">
+                <button type="submit"
+                        mat-button
+                        [disabled]="!userForm.valid">Update</button>
+            </div>
+        </form>
+
+    </mat-card>
+</div>

@@ -1,0 +1,12 @@
+div {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  mat-card {
+    margin: auto;
+    height: auto;
+    width: 500px;
+  }
+}
