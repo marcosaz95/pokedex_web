@@ -1,11 +1,12 @@
-import { PasswordFormComponent } from './password-form/password-form.component';
-import { UserUpdatedComponent } from './user-updated/user-updated.component';
-import { IUser } from './../../../../models/interfaces/user.interface';
-import { EMAIL_REGEX } from './../../../../shared/constants';
-import { User } from './../../../../models/classes/user';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+
+import { EMAIL_REGEX } from '@shared/constants';
+import { IUser } from '@interfaces/user.interface';
+import { PasswordFormComponent } from './password-form/password-form.component';
+import { User } from '@classes/user';
+import { UserUpdatedComponent } from './user-updated/user-updated.component';
 
 @Component({
   selector: 'app-profile',

@@ -1,7 +1,8 @@
-import { IPokemon } from './../../../../models/interfaces/pokemon.interface';
-import { Pokemon } from './../../../../models/classes/pokemon';
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
+import { IPokemon } from '@interfaces/pokemon.interface';
+import { Pokemon } from '@classes/pokemon';
 
 @Component({
   selector: 'app-pokemon-detail',

@@ -1,10 +1,11 @@
-import { SignOutMessageComponent } from './sign-out-message/sign-out-message.component';
-import { Pokemon } from './../../../../models/classes/pokemon';
-import { Router, NavigationEnd } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { filter } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
+
+import { Pokemon } from '@classes/pokemon';
+import { SignOutMessageComponent } from './sign-out-message/sign-out-message.component';
 
 @Component({
   selector: 'app-pokemon-main',

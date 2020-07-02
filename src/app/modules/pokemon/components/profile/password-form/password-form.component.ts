@@ -1,10 +1,11 @@
-import { IUser } from './../../../../../models/interfaces/user.interface';
-import { User } from './../../../../../models/classes/user';
-import { PASSWORD_REGEX } from './../../../../../shared/constants';
-import { PokedexValidators } from './../../../../../shared/validators';
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+
+import { IUser } from '@interfaces/user.interface';
+import { PASSWORD_REGEX } from '@shared/constants';
+import { PokedexValidators } from '@shared/validators';
+import { User } from '@classes/user';
 
 @Component({
   selector: 'app-password-form',

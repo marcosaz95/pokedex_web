@@ -1,9 +1,10 @@
-import { Pokemon } from './../../../../models/classes/pokemon';
-import { IPokemon, ISimplePokemonInfoList, ISimplePokemonInfo } from './../../../../models/interfaces/pokemon.interface';
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
-import { Subscription, forkJoin } from 'rxjs';
 import { Router } from '@angular/router';
 import { debounceTime } from 'rxjs/operators';
+import { Subscription, forkJoin } from 'rxjs';
+
+import { IPokemon, ISimplePokemonInfoList, ISimplePokemonInfo } from '@interfaces/pokemon.interface';
+import { Pokemon } from '@classes/pokemon';
 
 @Component({
   selector: 'app-pokemon-list',

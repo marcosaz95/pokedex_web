@@ -1,9 +1,10 @@
-import { ErrorMessageComponent } from './error-message/error-message.component';
-import { User } from './../../../../models/classes/user';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+
+import { ErrorMessageComponent } from './error-message/error-message.component';
+import { User } from '@classes/user';
 
 @Component({
   selector: 'app-user-login',

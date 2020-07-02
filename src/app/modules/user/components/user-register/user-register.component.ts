@@ -1,12 +1,13 @@
-import { UserRegisteredMessageComponent } from './user-registered-message/user-registered-message.component';
-import { User } from './../../../../models/classes/user';
-import { IUser } from './../../../../models/interfaces/user.interface';
-import { PokedexValidators } from './../../../../shared/validators';
-import { EMAIL_REGEX, PASSWORD_REGEX } from './../../../../shared/constants';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+
+import { EMAIL_REGEX, PASSWORD_REGEX } from '@shared/constants';
+import { IUser } from '@interfaces/user.interface';
+import { PokedexValidators } from '@shared/validators';
+import { User } from '@classes/user';
+import { UserRegisteredMessageComponent } from './user-registered-message/user-registered-message.component';
 
 @Component({
   selector: 'app-user-register',

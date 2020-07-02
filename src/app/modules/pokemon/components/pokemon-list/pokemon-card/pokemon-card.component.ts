@@ -1,5 +1,6 @@
-import { IPokemon } from './../../../../../models/interfaces/pokemon.interface';
 import { Component, OnInit, Input } from '@angular/core';
+
+import { IPokemon } from '@interfaces/pokemon.interface';
 
 @Component({
   selector: 'app-pokemon-card',

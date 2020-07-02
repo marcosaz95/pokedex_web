@@ -1,10 +1,11 @@
-import { ProfileComponent } from './components/profile/profile.component';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonMainComponent } from './components/pokemon-main/pokemon-main.component';
-import { RouterModule, Routes } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {
